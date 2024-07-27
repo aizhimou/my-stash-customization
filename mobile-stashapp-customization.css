@@ -1,0 +1,116 @@
+/* [Scenes tab] Hide the scene scrubber and max out the player's height */
+.scrubber-wrapper {
+  display: none;
+}
+
+@media(max-width: 576px) { 
+    /* performer page start */
+    [role="toolbar"].justify-content-center.btn-toolbar {
+      display: none
+    }
+    .d-flex.justify-content-center.mb-2.wrap-tags.filter-tags + .filter-container.pagination.btn-group {
+      display: none;
+    }
+    .filter-container.pagination.btn-group + .filter-container.text-muted.paginationIndex.center-text{
+      display: none;
+    }
+    .row.justify-content-center {
+        justify-content: space-around !important
+    }
+    .performer-card.grid-card.card {
+        width: 11.6rem !important;
+        padding: 0
+    }
+    .performer-card.grid-card.card hr{
+        display: none;
+    }
+    .performer-name {
+        font-size: 0.8rem
+    }
+    .performer-disambiguation {
+        display: none;
+    }
+    .performer-card__age {
+        display: none;
+    }
+    [role="group"].card-popovers.btn-group {
+        display: none;
+    }
+    /* performer page end */
+    
+    /* performer detail start */
+    .details-edit.mb-2 {
+        display: flex;
+        justify-content: center
+    }
+    .details-edit.mb-2 button {
+        margin-right: 0.25rem !important;
+    }
+    /* performer detail end */
+    
+    /* scence page start */
+    .card-section-title.flex-aligned .TruncatedText {
+        -webkit-line-clamp: 1 !important;
+        font-size: 1rem;
+    }
+    .scene-card__details {
+        display: none
+    }
+    .card-check.mousetrap.form-control {
+        display: none;
+    }
+    .scene-card.zoom-1.grid-card.card hr {
+        display: none;
+    }
+    .navbar-buttons.flex-row.ml-auto.order-xl-2.navbar-nav .mr-2 {
+        display: none;
+    }
+    /* scence page end */
+    
+    /* scence detail page start */
+    .row.justify-content-center.scene-performers .performer-card.grid-card.card {
+        width: 100% !important;
+    }
+    .video-js .vjs-control-bar .vjs-control {
+        width: 2em
+    }
+    [data-rb-event-key="scene-video-filter-panel"] {
+        display: none
+    }
+    [role="tablist"].mr-auto.nav.nav-tabs {
+        margin-bottom: 0;
+    }
+    /* scence detail page end */
+    
+}
+
+@media (pointer: coarse) {
+    .video-js.vjs-touch-enabled.vjs-has-started .vjs-big-button-group {
+        display: none !important; /* 例子：覆盖为不显示 */
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .video-js.vjs-touch-enabled.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-big-button-group {
+        opacity: 1 !important; /* 例子：设置为完全不透明 */
+        pointer-events: auto !important;
+        visibility: visible !important;
+    }
+
+    .video-js.vjs-touch-enabled .vjs-big-play-pause-button .vjs-icon-placeholder:before {
+        content: normal !important; /* 例子：正常内容 */
+        font-family: sans-serif !important; /* 例子：默认字体 */
+    }
+
+    .video-js.vjs-touch-enabled.vjs-playing .vjs-big-play-pause-button .vjs-icon-placeholder:before {
+        content: normal !important;
+    }
+
+    .video-js.vjs-touch-enabled .vjs-vtt-thumbnail-display {
+        bottom: initial !important;
+    }
+
+    .video-js.vjs-touch-enabled .vjs-control-bar .vjs-seek-button {
+        display: block !important;
+    }
+}
